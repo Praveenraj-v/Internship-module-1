@@ -14,7 +14,8 @@ export default function Home() {
       </div>
       <div className="w-full">
         <div className="text-[50px] w-fit mx-auto mt-[200px] font-serif">Search University</div>
-        <div className="text-[20px] text-blue-600 underline w-fit mx-auto font-serif cursor-pointer" onClick={() => setSignUpOpen(true)}>Signup</div>
+        <div className="text-[20px] font-serif w-fit mx-auto" > Don't Have an Account</div>
+        <div className="text-[20px] text-blue-600 underline w-fit mx-auto font-serif cursor-pointer" onClick={() => setSignUpOpen(true)}>SignUp</div>
       </div>
       <div>
         <Login isOpen={loginOpen} setIsOpen={setLoginOpen} signupOpen={setSignUpOpen} />

@@ -39,12 +39,12 @@ export default function SideNavbar({ setFilter }) {
                 <div>
                     <Link to="/">
                         <div className="relative border w-fit px-[5px] py-[5px]">
-                            <p className="text-[40px]">Praveenraj</p>
-                            <p className="absolute top-[47px] left-[80px] text-[14px]">university finder</p>
+                            <p className="text-[40px]">Tomang</p>
+                            <p className="absolute top-[49px] left-[25px] text-[14px]">university finder</p>
                         </div>
                     </Link>
                     <div className="mt-[25px]">
-                        <p className="ml-[15px]">Filter</p>
+                        <p className="ml-[15px]">Select State:</p>
                         <Combobox value={selected} onChange={setSelected} >
                             <div className="relative mt-1">
                                 <div className="relative w-full cursor-default overflow-hidden rounded-full bg-white text-left shadow-md border focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">

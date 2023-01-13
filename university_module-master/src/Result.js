@@ -23,22 +23,22 @@ export default function Result() {
     useEffect(() => {
         let newList = [];
         for (const i of universityList) {
-            if(i['state-province'] == stateFilter){
+            if (i['state-province'] == stateFilter) {
                 newList.push(i);
             }
         }
         setFilteredUniversityList(newList);
-    },[stateFilter])
+    }, [stateFilter])
 
     useEffect(() => {
         let newList = [];
         for (const i of universityList) {
-            if(i.name == universityFilter){
+            if (i.name == universityFilter) {
                 newList.push(i);
             }
         }
         setFilteredUniversityList(newList);
-    },[universityFilter])
+    }, [universityFilter])
 
     return (
         <>
@@ -49,7 +49,19 @@ export default function Result() {
                     <div className="sticky top-2">
                         <SearchBar setFilter={setUniversityFilter} />
                     </div>
-                    <Pagination itemsPerPage={15} items={filteredUniversityList.length == 0 ? universityList : filteredUniversityList} />
+                    <div>
+                        {
+                            universityList.length == 0 ? <div className="mx-auto w-fit flex items-center h-[75vh]">
+                                <div class="loadingio-spinner-double-ring-nsabvgqvd6n"><div class="ldio-6w8669zz4jy">
+                                    <div></div>
+                                    <div></div>
+                                    <div><div></div></div>
+                                    <div><div></div></div>
+                                </div></div>
+                            </div> : <Pagination itemsPerPage={15} items={filteredUniversityList.length == 0 ? universityList : filteredUniversityList} />
+                        }
+                    </div>
+                    {/* <Pagination itemsPerPage={15} items={filteredUniversityList.length == 0 ? universityList : filteredUniversityList} /> */}
                 </div>
             </div>
         </>
